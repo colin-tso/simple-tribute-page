@@ -87,6 +87,7 @@ p {
   grid-template-areas:
     "header header"
     "content photo";
+  min-height: 600px;
 }
 
 .header {
@@ -154,11 +155,13 @@ p {
     flex-flow: column-reverse nowrap;
     justify-self: center;
   }
+
   .grid-image {
     width: 80%;
     height: auto;
     display: block;
   }
+  
   #image {
     max-height: 400px;
   }
