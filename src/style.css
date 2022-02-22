@@ -1,0 +1,161 @@
+html {
+  height: 100%;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+body {
+  padding: 0 0 0 0;
+  margin: 2.5em 0 0 0;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8)
+    url(https://upload.wikimedia.org/wikipedia/commons/4/42/LinkinParkBerlin2010.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+header {
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 36pt;
+  padding: 0.2em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+  font-size: 18pt;
+}
+
+h1 a {
+  color: white;
+}
+
+figure {
+  font-family: Roboto, sans-serif;
+  text-align: left;
+}
+
+blockquote {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1em;
+  border-radius: 10px 10px;
+}
+
+#title-caption {
+  text-indent: 5em;
+}
+
+#img-caption {
+  display: block;
+  text-align: center;
+  margin: 1em;
+}
+
+article {
+  font-family: Roboto, sans-serif;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2em auto 2em auto;
+  margin: 2em 2em 2em 2em;
+  color: black;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1;
+}
+
+.container {
+  padding: 1em 2em 2em 2em;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr 1fr;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header header"
+    "content photo"
+    "content photo";
+}
+
+.header {
+  grid-area: header;
+  line-height: 0em;
+}
+
+.content {
+  grid-area: content;
+  line-height: 1.8em;
+}
+
+.grid-image {
+  grid-area: photo;
+  object-fit: cover;
+  width: 100%;
+  max-height: 500px;
+}
+
+#image {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.band-logo {
+  position: relative;
+  top: -1.3em;
+  max-width: 30%;
+  max-height: calc(5em * 0.75);
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+  filter: invert(1);
+}
+
+.band-logo-text {
+  max-width: 30%;
+  max-height: 5em;
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+  filter: invert(1);
+}
+
+#title-block {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid;
+  width: 800px;
+  max-width: 100%;
+  align-content: center;
+  justify-content: center;
+  align-self: center;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-areas:
+      "header header"
+      "content content"
+      "photo photo";
+  }
+}
