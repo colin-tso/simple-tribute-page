@@ -6,7 +6,8 @@
         {
             "label": "build page",
             "type": "shell",
-            "command": "git subtree push --prefix dist origin gh-pages"
+            "command": "git subtree push --prefix dist origin gh-pages",
+            "problemMatcher": []
         }
     ]
 }
